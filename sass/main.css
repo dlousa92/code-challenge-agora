@@ -51,6 +51,106 @@ Variables
 Styles
 */
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  body .background-lightblue {
+    background-color: #71a1be; }
+  body .background-darkblue {
+    background-color: #05263a; }
+  body .background-pink {
+    background-color: #f58c99; }
+  body .intro-info {
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 2px #005282 solid;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin: 2rem; }
+  body .intro-breakdown {
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem; }
+    body .intro-breakdown__text {
+      margin-bottom: 1rem; }
+      body .intro-breakdown__text .text-blue {
+        color: #005282; }
+    body .intro-breakdown .input-button {
+      font-weight: normal; }
+  body .register-button {
+    color: #ffffff;
+    background-color: #005282;
+    width: 100%;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin: 1rem 0rem; }
+  body .event-info {
+    width: 100%; }
+    body .event-info__calendar {
+      padding: 1rem; }
+      body .event-info__calendar .calendar-img {
+        display: block;
+        margin: 0 auto; }
+      body .event-info__calendar p {
+        color: #ffffff;
+        text-align: center;
+        margin: 0 auto; }
+        body .event-info__calendar p:first-of-type {
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin: 1rem 0rem; }
+    body .event-info__countdown {
+      color: #ffffff;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem; }
+  body .author-info {
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body .author-info img {
+      margin-top: 2rem; }
+    body .author-info p {
+      font-style: italic;
+      margin: 1rem 0rem; }
+    body .author-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem; }
+  body .details-info h3 {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0rem; }
+  body .details-info .checkmark {
+    display: flex;
+    align-items: center;
+    margin: 2rem 1rem; }
+    body .details-info .checkmark-img {
+      display: block;
+      align-self: flex-start; }
+    body .details-info .checkmark p {
+      margin-left: 1rem;
+      font-size: 1.2rem; }
+  body .callout {
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    padding: 2rem; }
+    body .callout p {
+      font-style: italic; }
+  body .triangle {
+    z-index: -1;
+    margin-top: -1rem;
+    border: 75px solid #05263a;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #05263a;
+    border-bottom-color: transparent; }
+  body .calltoaction-info {
+    margin-top: -4rem; }
 
 /*# sourceMappingURL=main.css.map */

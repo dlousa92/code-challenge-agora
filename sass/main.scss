@@ -52,7 +52,8 @@ Variables
   // Fonts
   $main-font: "Lato", sans-serif;
   $sub-font: arial, sans-serif;
-    // C0lors
+    // Colors
+  $white: #ffffff;
   $light-blue: #71a1be;
   $medium-blue: #005282;
   $dark-blue: #05263a;
@@ -65,4 +66,161 @@ Styles
 
 body {
   font-family: $main-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .background-lightblue {
+    background-color: $light-blue
+  }
+
+  .background-darkblue {
+    background-color: $dark-blue
+  }
+
+  .background-pink {
+    background-color: $pink;
+  }
+
+  .intro-info {
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 2px $medium-blue solid;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin: 2rem;
+  }
+
+  .intro-breakdown {
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem;
+
+    &__text {
+      margin-bottom: 1rem;
+
+      .text-blue {
+        color: $medium-blue
+      }
+    }
+
+    .input-button {
+      font-weight: normal;
+    }
+  }
+
+  .register-button {
+    color: $white;
+    background-color: $medium-blue; 
+    width: 100%;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin: 1rem 0rem;
+  }
+
+  .event-info {
+    width: 100%;
+
+    &__calendar {
+      padding: 1rem;
+
+      .calendar-img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        color: $white;
+        text-align: center;
+        margin: 0 auto;
+
+        &:first-of-type {
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin: 1rem 0rem;
+        }
+      }
+    }
+
+    &__countdown {
+      color: $white;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem;
+    }
+  }
+
+  .author-info {
+    color: $white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-top: 2rem;
+    }
+
+    p {
+      font-style: italic;
+      margin: 1rem 0rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .details-info {
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      margin: 2rem 0rem;
+    }
+
+    .checkmark {
+      display: flex;
+      align-items: center;
+      margin: 2rem 1rem;
+
+      &-img {
+        display: block;
+        align-self: flex-start;
+      }
+
+      p {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .callout {
+    color: $white;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+
+    p {
+      font-style: italic;
+    }
+  }
+
+  .triangle {
+    z-index: -1;
+    margin-top: -1rem;
+    border: 75px solid $dark-blue;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: $dark-blue;
+    border-bottom-color: transparent;
+  }
+
+  .calltoaction-info {
+    margin-top: -4rem;
+  }
 }
