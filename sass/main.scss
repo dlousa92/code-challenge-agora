@@ -223,6 +223,11 @@ body {
         flex-basis: 60%;
         padding-top: 2rem;
       }
+
+      .countdown-timer {
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
     }
   }
 
@@ -333,6 +338,13 @@ body {
   }
 
   .calltoaction-info {
-    margin-top: -4rem;
+    &:last-of-type {
+      margin-top: -4rem;
+    }
+
+    .button-response {
+      margin: 1rem 0 2rem;
+      text-align: center;
+    }
   }
 }
