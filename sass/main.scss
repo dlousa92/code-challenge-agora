@@ -52,12 +52,55 @@ Variables
   // Fonts
   $main-font: "Lato", sans-serif;
   $sub-font: arial, sans-serif;
-    // Colors
+
+  // Colors
   $white: #ffffff;
+  $grey: #ebebeb;
   $light-blue: #71a1be;
   $medium-blue: #005282;
   $dark-blue: #05263a;
   $pink: #f58c99;
+
+  // Breakpoints
+  // Small tablets and large smartphones (landscape view)
+  $screen-sm-min: 576px;
+  // Small tablets (portrait view)
+  $screen-md-min: 768px;
+  // Tablets and small desktops
+  $screen-lg-min: 992px;
+  // Large tablets and desktops
+  $screen-xl-min: 1200px;
+
+  // Mixins
+
+// Small devices
+@mixin breakpoint-sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin breakpoint-md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin breakpoint-lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin breakpoint-xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
 
 
 /*
@@ -70,6 +113,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint-lg {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .background-grey {
+    background-color: $grey;
+  }
 
   .background-lightblue {
     background-color: $light-blue
@@ -95,7 +147,11 @@ body {
   .intro-breakdown {
     font-weight: bold;
     text-align: center;
-    margin: 2rem;
+    padding: 1rem;
+
+    @include breakpoint-lg {
+      width: 75%;
+    }
 
     &__text {
       margin-bottom: 1rem;
@@ -105,8 +161,12 @@ body {
       }
     }
 
-    .input-button {
-      font-weight: normal;
+    &__calltoaction {
+      @include breakpoint-lg {
+      }
+      .input-button {
+        font-weight: normal;
+      }
     }
   }
 
@@ -122,8 +182,17 @@ body {
   .event-info {
     width: 100%;
 
+    @include breakpoint-lg {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &__calendar {
       padding: 1rem;
+      @include breakpoint-lg {
+        flex-basis: 35%;
+        margin-right: 1rem;
+      }
 
       .calendar-img {
         display: block;
@@ -149,51 +218,73 @@ body {
       font-size: 1.5rem;
       font-weight: bold;
       padding: 1rem;
+
+      @include breakpoint-lg {
+        flex-basis: 60%;
+        padding-top: 2rem;
+      }
     }
   }
 
-  .author-info {
-    color: $white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .details {
 
-    img {
-      margin-top: 2rem;
-    }
-
-    p {
-      font-style: italic;
+    @include breakpoint-lg {
+      display: flex;
       margin: 1rem 0rem;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  }
-
-  .details-info {
-    h3 {
-      text-align: center;
-      font-weight: bold;
-      margin: 2rem 0rem;
-    }
-
-    .checkmark {
+    &-author {
+      color: $white;
+      width: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      margin: 2rem 1rem;
+      
+      @include breakpoint-lg {
+        padding: 2rem;
+      }
 
-      &-img {
-        display: block;
-        align-self: flex-start;
+      img {
+        margin-top: 2rem;
       }
 
       p {
-        margin-left: 1rem;
-        font-size: 1.2rem;
+        font-style: italic;
+        margin: 1rem 0rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-info {
+      padding: 2rem 0rem;
+
+      h3 {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .checkmark {
+        display: flex;
+        align-items: center;
+        margin: 2rem 1rem;
+
+        &:last-of-type {
+          margin-bottom: 0rem;
+        }
+
+        &-img {
+          display: block;
+          align-self: flex-start;
+        }
+
+        p {
+          margin-left: 1rem;
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -201,8 +292,29 @@ body {
   .callout {
     color: $white;
     text-align: center;
-    width: 100%;
     padding: 2rem;
+
+    @include breakpoint-lg {
+      width: 93%;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+    @include breakpoint-lg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exclamation-img {
+      display: none;
+
+      @include breakpoint-lg {
+        display: block;
+        margin-right: 2rem;
+      }
+    }
 
     p {
       font-style: italic;
