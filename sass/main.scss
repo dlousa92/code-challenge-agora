@@ -297,11 +297,8 @@ body {
   .callout {
     color: $white;
     text-align: center;
-    padding: 2rem;
-
-    @include breakpoint-lg {
-      width: 93%;
-    }
+    width: 100%;
+    padding: 2rem 0rem;
 
     h2 {
       font-size: 1rem;
